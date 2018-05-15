@@ -8,9 +8,7 @@ require_once('./line_class.php');
 require_once('./unirest-php-master/src/Unirest.php');
 $channelAccessToken = '';
 $channelSecret = '';
-
 $client = new LINEBotTiny($channelAccessToken, $channelSecret);
-
 $userId 	= $client->parseEvents()[0]['source']['userId'];
 $groupId 	= $client->parseEvents()[0]['source']['groupId'];
 $replyToken = $client->parseEvents()[0]['replyToken'];
